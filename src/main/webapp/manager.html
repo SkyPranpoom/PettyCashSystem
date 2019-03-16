@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Petty Cash System</title>
+        <script src="js/jquery.1.9.1.min.js"></script>
+
+        <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+
+        <!-- Javascipt for index page -->
+        <script src="js/ManagerFunction.js"></script>
+
+
+    </head>
+
+    <body>
+        <div class="container" >
+
+            <h1 style="text-align:center" >Petty Cash System<br></h1> 
+
+            <!-- Approve Petty Cash's Modal -->
+
+            <div class="modal fade" id="approveModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="ModalLabel">Petty Cash : <label id="headerCode"></label></h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="margin: 0px 5% 0px 5% ">
+                            <form>
+                                <div class="row">
+                                    <label for="recipient-name" class="col-form-label">Employee ID :</label>
+                                    <text id="Emp_id"></text>
+                                </div>
+                                <div class="row">
+                                    <label for="message-text" class="col-form-label">Amount :</label>
+                                    <text id="Amount" ></text>
+                                </div>
+                                <div class="row">
+                                    <label for="message-text" class="col-form-label">Description : </label>
+                                    <text id="Description" ></text>
+                                </div>
+                                <div class="row">
+                                    <label for="message-text" class="col-form-label">Status : </label>
+                                    <text id="Status" ></text>
+                                </div>
+                                <div class="row">
+                                    <label for="message-text" class="col-form-label">Create Date : </label>
+                                    <text id="Create_datetime" ></text>
+                                </div>
+                                <div class="row">
+                                    <label for="message-text" class="col-form-label">Update Date : </label>
+                                    <text id="Update_datetime" ></text>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger" id="notApprovePettyCash" onclick="notApprovePettyCash(this.value)" value="">Not Approve</button>
+                            <button type="button" class="btn btn-success" id="approvePettyCash" onclick="approvePettyCash(this.value)" value="">Approve</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Petty Cashes Table -->
+            <div style="text-align:center;">
+                <a href="index.html" target="_self">Link to Employee Page</a>
+                <table id="added-pettycashes" class="table" width="100%">
+                    <tr>
+                        <th>Code</th>
+                        <th>Employee ID</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Create_datetime</th>
+                        <th>Update_datetime</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body> 
+</html>

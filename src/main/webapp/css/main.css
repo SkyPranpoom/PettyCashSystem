@@ -1,0 +1,20 @@
+table{
+    margin-top: 50px;
+}
+
+th{
+    text-align: center;
+}
+
+h1{
+    font-family:georgia,garamond,serif !important;
+    font-size:50px;
+    font-style:italic;
+    margin-top: 80px;
+}
+
+#addModalBtn{
+    width: 175px;
+    height: 35px;
+    font-weight: bold;
+}
